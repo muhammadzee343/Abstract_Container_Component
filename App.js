@@ -4,7 +4,6 @@ import BackArrowIcon from './src/Assets/icons/BackArrow';
 import BellIcon from './src/Assets/icons/BellIcon';
 import CustomHeader from './src/Components/CustomHeader';
 import SquareButton from './src/Components/SquareButton';
-import SquareHalfButton from './src/Components/SquareHalfButton';
 import SquareTextInput from './src/Components/SquareTextInput';
 import InfoContainer from './src/Components/InfoContainer';
 import TextContainer from './src/Components/TextConatiner';
@@ -50,7 +49,7 @@ class App extends PureComponent {
           <SquareTextInput
             placeHolder="Mobile Number"
             // value="val"
-            // keyboardType="numeric"
+            width="50%"
             isEditable={true}
           />
         </View>
@@ -62,19 +61,11 @@ class App extends PureComponent {
             alignItems: 'center',
             marginTop: 30,
           }}>
-          <SquareButton title="Next" onPress={this.SquareButtOnClickAction} />
-        </View>
-
-        <View
-          style={{
-            width: '100%',
-            justifyContent: 'center',
-            alignItems: 'center',
-            marginTop: 30,
-          }}>
-          <SquareHalfButton
+          <SquareButton
             title="Next"
             onPress={this.SquareButtOnClickAction}
+            width="50%"
+            // leftButtonIcon={<BellIcon iconColor="white" />}
           />
         </View>
       </View>
