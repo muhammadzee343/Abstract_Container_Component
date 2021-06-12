@@ -10,30 +10,24 @@ const SquareButton = props => {
       rippleOpacity={0.87}
       style={[
         props.leftButtonIcon
-          ? {
-              height: 50,
-              width: props.width ? props.width : '80%',
-              backgroundColor: '#69A03A',
-              borderRadius: 13,
-              flexDirection: 'row',
-            }
-          : {
-              height: 50,
-              width: props.width ? props.width : '80%',
-              justifyContent: 'center',
-              backgroundColor: '#69A03A',
-              borderRadius: 13,
-              flexDirection: 'row',
-            },
+          ? [
+              styles.squareButtonInverse_WithPropsStyle,
+              {width: props.width ? props.width : '30%'},
+            ]
+          : [
+              styles.squareButtonDefaultStyle,
+              {width: props.width ? props.width : '30%'},
+            ],
       ]}
       onPress={props.onPress}>
       {props.leftButtonIcon ? (
         <View
           style={{
             height: 50,
-            width: '20%',
+            width: '30%',
             justifyContent: 'center',
             alignItems: 'center',
+            // backgroundColor: 'gray'
           }}>
           {props.leftButtonIcon}
         </View>
@@ -52,24 +46,22 @@ const styles = StyleSheet.create({
   },
   squareButtonDefaultStyle: {
     height: 50,
-    width: '80%',
+    // width: '80%',
     justifyContent: 'center',
     // alignItems: 'center',
     backgroundColor: '#69A03A',
     borderRadius: 13,
     // paddingVertical: 10,
-    paddingHorizontal: 12,
     flexDirection: 'row',
   },
   squareButtonInverse_WithPropsStyle: {
     height: 50,
-    width: '80%',
+    // width: '80%',
     // justifyContent: 'center',
     // alignItems: 'center',
     backgroundColor: '#69A03A',
     borderRadius: 13,
     // paddingVertical: 10,
-    paddingHorizontal: 12,
     flexDirection: 'row',
   },
 });
